@@ -1,0 +1,704 @@
+@font-face {
+  font-family: 'PhagsPaRegular';
+  src: url('../../fonts/Microsoft PhagsPa.ttf')  format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PhagsPaBold';
+  src: url('../../fonts/phagspab.ttf')  format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$global-font-family:                            'PhagsPaRegular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$global-font-size:                              18px;
+$global-line-height:                            24px;
+
+$global-color:                                  #000;
+$global-muted-color:                            #646464;
+
+$global-link-color:                             #000;
+$global-link-hover-color:                       #747474;
+
+$global-inverse-color:                          #fff;
+
+$global-background:                             #fff;
+
+$global-muted-background:                       #646464;
+$global-primary-background:                     #fbfbfb;
+$global-secondary-background:                   #131a1d;
+
+$global-success-background:                     #32d296;
+$global-warning-background:                     #faa05a;
+$global-danger-background:                      #f0506e;
+
+$global-border-width:                           1px;
+$global-border-color:                           #000;
+$global-border:                                 #000;
+
+$global-margin:                                 15px;
+
+$global-gutter:                                 60px;
+
+$global-control-height:                         38px;
+
+
+
+//*base*//
+$base-body-background:                          $global-background;
+$base-body-font-family:                         $global-font-family;
+
+$base-body-font-size:                           $global-font-size;
+$base-body-line-height:                         $global-line-height;
+$base-body-color:                               $global-color;
+
+$base-link-color:                                $global-link-color;
+$base-link-text-decoration:                     none;
+$base-link-hover-color:                          $global-link-hover-color;
+$base-link-hover-text-decoration:               underline;
+
+$base-margin-vertical:                           $global-margin;
+
+$base-heading-font-family:                     'PhagsPaBold';
+$base-heading-color:                             $global-color;
+$base-heading-text-transform:                   none;
+$base-heading-margin-bottom:                    $global-margin;
+$base-h1-font-size:                             48px;
+$base-h1-line-height:                           72px;
+$base-h2-font-size:                             32px;
+$base-h2-line-height:                           24px;
+$base-h3-font-size:                             24px;
+$base-h3-line-height:                           24px;
+
+$base-list-padding-left:                        0;
+
+$base-selection-background:                     #fff;
+$base-selection-color:                           $global-muted-color;
+
+//*table*//
+
+$table-color:                                   $global-color;
+$table-background:                              global-background;
+
+$table-margin-vertical:                         $global-margin;
+
+$table-cell-padding:                            20px 40px;
+
+$table-divider-border-width:                    $global-border-width;
+$table-divider-border:                          $global-border-width solid $global-border;
+
+$table-expand-min-width:                        150px;
+
+$table-color:                                   $global-color;
+$table-background:                              $global-background;
+
+$table-margin-vertical:                         $global-margin;
+
+$table-cell-padding:                            20px 40px;
+
+$table-divider-border-width:                    $global-border-width;
+$table-divider-border:                          $global-border-width solid $global-border;
+
+$table-expand-min-width:                        150px;
+
+
+//*button*//
+
+$button-color: #fff;
+$button-background: #000;
+$button-font-family: 'PhagsPaBold';
+$button-font-size: 24px;
+$button-padding: 6px 14px;
+$button-height: 65px;
+
+$button-color-hover: #fff;
+$button-background-hover: $global-muted-background;
+
+$button-color-focus: #fff;
+$button-background-focus: $global-muted-background;
+
+$button-color-active: #fff;
+$button-background-active: $global-muted-background;
+
+$form-height:                                   $global-control-height;
+$form-line-height:                              9px;
+$form-padding:                                  6px;
+
+$form-background:                               #fff;
+$form-color:                                    $global-color;
+
+$form-focus-background:                         #fff;
+$form-focus-color:                              $global-muted-color;
+
+$form-disabled-background:                      #fff;
+$form-disabled-color:                           $global-muted-color;
+
+$form-placeholder-color:                        $global-muted-color;
+
+$form-invalid-color:                            $global-danger-background;
+$form-valid-color:                              $global-success-background;
+
+
+$form-radio-size:                               40px;
+
+$form-radio-background:                         #fff;
+
+$form-radio-checked-background:                 #fff;
+
+$form-radio-checked-focus-background:           #fff;
+
+$form-radio-disabled-background:                #fff;
+
+$form-control-margin-bottom:                    $global-margin;
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: $table-margin-vertical;
+  background: $table-background;
+  color: $table-color;
+}
+
+* + table {
+  margin-top: $table-margin-vertical;
+}
+
+table caption {
+  text-align: left;
+}
+
+table td,
+table th {
+  text-align: center;
+  border: $table-divider-border;
+  border-width: 0 0 $table-divider-border-width;
+  padding: $table-cell-padding;
+  vertical-align: center;
+}
+
+.table-shrink {
+  width: 1px;
+}
+
+.table-expand {
+  min-width: $table-expand-min-width;
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: $base-body-font-family;
+  font-size: $base-body-font-size;
+  line-height: $base-body-line-height;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: $base-body-background;
+  color: $base-body-color;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: $base-link-text-decoration;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline: none;
+}
+
+a:hover {
+  color: $base-link-hover-color;
+  text-decoration: $base-link-hover-text-decoration;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+  color: var(--base-link-hover-color);
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+audio,
+canvas,
+img,
+video {
+  max-width: 100%;
+  width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+p,
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure {
+  margin: 0 0 0 0;
+}
+
+*+p,
+*+ul,
+*+ol,
+*+dl,
+*+pre,
+*+address,
+*+fieldset,
+*+figure {
+  margin-top: $base-margin-vertical;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0 0;
+  font-family: 'PhagsPaBold';
+  color: $base-heading-color;
+  text-transform: $base-heading-text-transform;
+}
+
+h1, .h1 {
+  font-size: $base-h1-font-size;
+  line-height: $base-h1-line-height;
+}
+
+h2, .h2 {
+  font-size: $base-h2-font-size;
+  line-height: $base-h2-line-height;
+}
+
+h3, .h3 {
+  font-size: $base-h3-font-size;
+  line-height: $base-h3-line-height;
+}
+
+ul,
+ol {
+  padding-left: $base-list-padding-left;
+}
+
+ul>li>ul,
+ul>li>ol,
+ol>li>ol,
+ol>li>ul {
+  margin: 0;
+}
+
+li.is-active {
+  color: $global-muted-color;
+  text-decoration: underline;
+}
+
+::-moz-selection {
+  background: $base-selection-background;
+  color: $base-selection-color;
+  text-shadow: none;
+}
+
+::selection {
+  background: $base-selection-background;
+  color: $base-selection-color;
+  text-shadow: none;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+  margin: 0;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  user-select: none;
+  border-radius: 0;
+  overflow: visible;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $button-padding;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  min-height: $button-height;
+  text-decoration: none;
+  background: $button-background;
+  color: $button-color;
+}
+
+.button:not(:disabled) {
+  cursor: pointer
+}
+
+.button::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+.button:hover {
+  text-decoration: none;
+  background: $button-background-hover;
+  color: $button-color-hover;
+}
+
+.button:focus {
+  outline: none;
+  background: $button-background-focus;
+  color: $button-color-focus;
+}
+
+.button:active,
+.button.is-active {
+  background: $button-background-active;
+  color: $button-color-active;
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  //height: auto;
+}
+
+[type="radio"]:not(:disabled),
+[type="checkbox"]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+::-webkit-datetime-edit,
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+input:not([type]),
+input[type=email],
+input[type=date],
+input[type=datetime-local],
+input[type=file],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type="month"],
+input[type=week],
+input[type=text],
+input[type=time],
+input[type=url],
+textarea,
+select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  outline: 0;
+  padding: $form-padding;
+  min-height: $form-height;
+  background: $form-background;
+  border: none;
+  border-bottom: 1px solid #000;
+  color: $form-color;
+  box-shadow: 0 0 0 0 transparent inset;
+  //margin-top: 70px;
+  cursor: pointer;
+}
+
+
+input:not([type]):hover,
+input:not([type]):focus,
+input[type=email]:hover,
+input[type=email]:focus,
+input[type=date]:hover,
+input[type=date]:focus,
+input[type=number]:hover,
+input[type=number]:focus,
+input[type=tel]:hover,
+input[type=tel]:focus,
+input[type=text]:hover,
+input[type=text]:focus {
+  border-bottom: 1px solid $global-muted-color;
+}
+
+
+
+input:not([type]),
+input[type=date],
+input[type=datetime-local],
+input[type=file],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type="month"],
+input[type=week],
+input[type=text],
+input[type=time],
+input[type=url],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+::placeholder {
+  color: $form-placeholder-color;
+  opacity: 1;
+}
+
+input:not([type]):focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=file]:focus,
+  /*input[type=number]:focus,*/
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type="month"]:focus,
+input[type=week]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+textarea:focus,
+select:focus {
+  background: $form-focus-background;
+  color: $form-focus-color;
+}
+
+input:not([type])[disabled],
+input[type=date][disabled],
+input[type=datetime-local][disabled],
+input[type=email][disabled],
+input[type=file][disabled],
+input[type=number][disabled],
+input[type=password][disabled],
+input[type=search][disabled],
+input[type=tel][disabled],
+input[type="month"][disabled],
+input[type=week][disabled],
+input[type=text][disabled],
+input[type=time][disabled],
+input[type=url][disabled],
+textarea:disabled,
+select:disabled {
+  pointer-events: none;
+  opacity: .45;
+  background: $form-disabled-background;
+  color: $form-disabled-color;
+}
+
+select:not([multiple]):not([size])::-ms-expand {
+  display: none
+}
+
+select:not([multiple]):not([size]):disabled {
+  background-image: var(--internal-form-select-image);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  border: none;
+  display: inline-block;
+  height: $form-radio-size;
+  width: $form-radio-size;
+  overflow: hidden;
+  //margin-top: $form-radio-margin-top;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $form-radio-background;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: 50% 50%;
+}
+
+input[type="radio"]:checked {
+  border: 1px solid #000;
+}
+
+input[type="checkbox"]:checked {
+  border: 1px solid #000;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  border: 1px solid #000;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked,
+input[type="checkbox"]:indeterminate {
+  background-color: $form-radio-checked-background;
+}
+
+input[type="radio"]:checked:focus,
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus {
+  background-color: $form-radio-checked-focus-background;
+}
+
+input[type="radio"]:disabled:checked {
+  background-image: var(--internal-form-radio-image);
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+  background-color: $form-radio-disabled-background;
+}
+
+label.is-invalid {
+  color: $form-invalid-color;
+}
+
+label.is-valid {
+  color: var(--form-valid-color);
+}
+
+input.is-invalid,
+input.is-invalid:focus {
+  color: $form-invalid-color;
+  border-color: $form-invalid-color;
+}
+
+input.is-valid,
+input.is-valid:focus {
+  color: $form-valid-color;
+  border-color: $form-valid-color;
+}
+
+.form-control {
+  margin-bottom: $form-control-margin-bottom;
+}
+
+.form-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  //width: $form-icon-width;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  //color: $form-icon-color;
+}
+
+//.form-icon:hover {
+//  color: $form-icon-hover-color;
+//}
+
+.form-icon:not(a):not(button):not(input) { pointer-events: none; }
+
+//.form-icon:not(.form-icon-flip) ~ input { padding-left: var(--form-icon-width) !important; }
+
+.form-icon-flip {
+  right: 0;
+  left: auto;
+}
+
+//.form-icon-flip ~ input { padding-right: var(--form-icon-width) !important; }

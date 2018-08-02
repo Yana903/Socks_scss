@@ -1,0 +1,52 @@
+@import "../themes/themes";
+[class^="icon-"],
+[class*=" icon-"] {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+svg[class^="icon-"],
+svg[class*=" icon-"] {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+svg.icon-arrow-right,
+svg.icon-social-facebook,
+svg.icon-google,
+svg.icon-social-twitter,
+svg.icon-instagram,
+svg.icon-pinterest
+{
+  fill: #fff !important;
+  width: 25px;
+  height: 25px;
+}
+
+.icon-group a svg:hover, .icon-group a svg:focus, .icon-group a svg:active {
+  fill: $global-muted-color !important;
+}
+
+.cart-like-hover .icon-group svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-like-hover .icon-group svg:first-child {
+  margin-bottom: 30px;
+}

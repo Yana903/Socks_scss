@@ -1,0 +1,46 @@
+.nice-number {
+  display: inline-flex;
+  justify-content: stretch;
+  min-height: 40px;
+  height: 40px;
+}
+
+.nice-number input {
+  vertical-align: middle;
+  -moz-appearance: textfield;
+  box-sizing: content-box;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+input.counter-value {
+  min-height: 25px !important;
+  border: 1px solid #000 !important;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nice-number button {
+  min-height: 40px;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  color: #000;
+}
+
+.nice-number button:first-of-type {
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.nice-number button:last-of-type {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+}
